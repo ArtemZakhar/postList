@@ -151,63 +151,6 @@ export default defineComponent({
             @addNewComment="addNewComment"
             :selectedPost="selectedPost"
           />
-          <!--    <form data-cy="NewCommentForm" @submit.prevent="handleSubmit" v-if="isNewCommentOpen">
-            <InputTemplate
-              label="Author Name"
-              v-model="authorName"
-              :error="isNameError"
-              data-cy="NameField"
-              id="comment-author-name"
-              name="name"
-              placeholder="Name Surname"
-              errorMessage="Name is required"
-              icon="fa-user"
-            />
-
-            <InputTemplate
-              name="email"
-              label="Author Email"
-              v-model="authorEmail"
-              :error="isEmailError"
-              data-cy="EmailField"
-              id="comment-author-email"
-              placeholder="email@test.com"
-              errorMessage="Email is required"
-              icon="fa-user"
-            />
-
-            <InputTemplate
-              label="Comment Text"
-              v-model="commentText"
-              :error="isTextError"
-              data-cy="BodyField"
-              id="comment-body"
-              name="body"
-              placeholder="Type comment here"
-              errorMessage="Enter some text"
-              :textArea="true"
-            />
-
-            <div class="field is-grouped">
-              <div class="control">
-                <ButtonTemplate
-                  buttonType="submit"
-                  class="is-link"
-                  :submitting="submitting"
-                  label="Add"
-                />
-              </div>
-
-              <div class="control">
-                <ButtonTemplate
-                  buttonType="reset"
-                  class="is-light"
-                  label="Clear"
-                  @handleButton="resetForm"
-                />
-              </div>
-            </div>
-          </form> -->
         </div>
       </div>
     </div>

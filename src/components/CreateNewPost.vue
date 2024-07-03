@@ -7,6 +7,7 @@ import { useUserStore } from '@/stores/users'
 import { postNewPost, updatePost } from '@/api/posts'
 import { usePostsStore } from '@/stores/posts'
 import type { Post } from '@/types/Post'
+import { idGenerator } from '@/helpers/idGenerator'
 
 export default defineComponent({
   components: { InputTemplate, ButtonTemplate },
@@ -98,7 +99,7 @@ export default defineComponent({
           }
           this.$emit('closeModal')
         } else {
-          const nextId = postsArr[postsArr.length - 1]?.id + 1 || 1
+          const nextId = idGenerator(postsArr)
 
           const newPost = {
             id: nextId,

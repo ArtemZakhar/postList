@@ -2,17 +2,18 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LoginPage from '../pages/LoginPage.vue'
 import { useUserStore } from '@/stores/users'
 import ListOfPostPage from '../pages/ListOfPostPage.vue'
+import { route } from '@/constants/routes'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
+      path: route.main,
       component: ListOfPostPage,
       meta: { auth: true }
     },
     {
-      path: '/login',
+      path: route.auth,
       component: LoginPage,
       meta: { auth: false }
     }

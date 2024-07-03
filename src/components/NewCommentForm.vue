@@ -8,6 +8,7 @@ import { postNewComment } from '@/api/comments'
 import type { CustomComment } from '@/types/CustomComment'
 import type { NewComment } from '@/types/Comment'
 import type { Post } from '@/types/Post'
+import { idGenerator } from '@/helpers/idGenerator'
 
 export default {
   components: { InputTemplate, ButtonTemplate },
@@ -74,7 +75,7 @@ export default {
         const post = postsList.posts.find((post) => post.id === this.selectedPost?.id)
 
         if (post) {
-          const id = post.comments[post.comments.length - 1]?.id + 1 || 1
+          const id = idGenerator(post.comments)
 
           const newComment: CustomComment = {
             id,
