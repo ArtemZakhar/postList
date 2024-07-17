@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/vue_list_of_posts',
+  base: '/postList',
   plugins: [vue()],
   resolve: {
     alias: {
